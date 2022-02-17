@@ -75,13 +75,13 @@ plt.show()
 
 # Simplified version of Plot 2
 
-fig = plt.figure(figsize=(20, 8))
+fig = plt.figure()
 ax = plt.subplot(1, 1, 1, aspect=1)
 
-plt.xlim(0, p), plt.ylim(0, p)
-
 for i in range(p):
-    label = "Series %d" % (1 + i)
-    plt.plot(X * p / 2, i + 0.5 + 2 * Y[i] / p, c="k", lw=2)
+    plt.plot(X * p / 2,
+             i + 0.5 + 2 * Y[i] / p,
+             c="k",  # all black lines
+             lw=2)
 
 plt.show()
